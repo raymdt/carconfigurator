@@ -1,4 +1,4 @@
-package edu.hm.carconfigurator.models;
+package edu.hm.carconfigurator.Testmodels;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -7,6 +7,7 @@ import static org.junit.Assert.assertNull;
 import java.io.IOException;
 import java.util.List;
 
+import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.junit.After;
 import org.junit.Before;
@@ -14,9 +15,10 @@ import org.junit.Test;
 
 import edu.hm.carconfigurator.usermanagement.Person;
 
-Session session;
 public class DataAccessFacadeTest  {
     private Person person;
+    Session session ;
+
     private Transaction tx;
     
     public DataAccessFacadeTest() throws IOException {
@@ -24,7 +26,6 @@ public class DataAccessFacadeTest  {
 
     @Before
     public void setUp() throws Exception {
-        super.setUp();
         tx = session.beginTransaction();
     }
     

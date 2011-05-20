@@ -1,19 +1,19 @@
-package edu.hm.carconfigurator.models;
+package edu.hm.carconfigurator.Testmodels;
 
 import java.io.IOException;
 import java.util.List;
 
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import edu.hm.carconfigurator.dbaccess.usermanagement.PersonDao;
 import edu.hm.carconfigurator.usermanagement.Person;
 
 public class PersonDAOTest extends DatabaseTestClass {
 
-    private PersonDAO personDao;
+    private PersonDao personDao;
     private Transaction tx;
     
     public PersonDAOTest(String name) throws IOException {
@@ -23,7 +23,7 @@ public class PersonDAOTest extends DatabaseTestClass {
     @Before
     public void setUp() throws Exception {
         super.setUp();
-        personDao = new PersonDAO(injector.getInstance(SessionFactory.class));
+        personDao = null;
         tx = getSession().beginTransaction();
     }
 
@@ -34,13 +34,13 @@ public class PersonDAOTest extends DatabaseTestClass {
 
     @Test
     public void testFindPersonPeter() {
-        List<Person> persons = personDao.findPersons("Peter", "Griffin");
+        List<Person> persons = (List<Person>) personDao.findUser("test paerson");
         assertEquals(1, persons.size());
     }
     
     @Test
     public void testFindRalph() {
-        List<Person> persons = personDao.findPersons("Ralph", "Wiggum");
+        List<Person> persons = (List<Person>) personDao.findUser("Ralph");
         assertEquals(1, persons.size());
     }
     
@@ -58,11 +58,11 @@ public class PersonDAOTest extends DatabaseTestClass {
     
     @Test
     public void testDelete() {
-        List<Person> persons = personDao.findPersons("Peter", "Griffin");
+        List<Person> persons = (List<Person>) personDao.findUser("Charly");
         assertEquals(1, persons.size());
         Person peter = persons.get(0);
         personDao.makeTransient(peter);
-        persons = personDao.findPersons("Peter", "Griffin");
+        persons = (List<Person>) personDao.findUser("Manou");
         assertEquals(0, persons.size());
     }
 

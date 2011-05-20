@@ -1,13 +1,14 @@
-package edu.hm.carconfigurator.models;
+package edu.hm.carconfigurator.Testmodels;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import edu.hm.carconfigurator.services.LoginResult;
+import edu.hm.carconfigurator.services.LoginService;
 
 public class LoginServiceTest extends DatabaseTestClass {
 
-    private ILoginService loginService;
+    private LoginService loginService;
 
     public LoginServiceTest(String name) {
         super(name);
@@ -16,22 +17,20 @@ public class LoginServiceTest extends DatabaseTestClass {
     @Before
     public void setUp() throws Exception {
         super.setUp();
-        loginService = injector.getInstance(ILoginService.class);
+        loginService = new LoginService(null);
     }
 
     @Test
     public void testLogonNonExistingUser() {
         LoginResult loginResult = loginService.login("bla", "blubb");
-        assertEquals(LoginResultStatus.NONEXISTING_USERNAME, loginResult.getStatus());
-        assertNull("No user should be provided here.", loginResult.getUser());
+        assertNull("No user should be provided here.", loginResult.toString());
     }
     
     @Test
     public void testCorrectUser() {
         LoginResult loginResult = loginService.login("pegr", "PP");
-        assertEquals(LoginResultStatus.SUCCESS, loginResult.getStatus());
-        assertNotNull(loginResult.getUser());
-        assertEquals("pegr", loginResult.getUser().getUserName());
+        assertNotNull(loginResult.toString());
+        assertEquals("pegr", loginResult.toString());
         assertEquals("Login Status is: SUCCESS for user pegr", loginResult.toString());
     }
 

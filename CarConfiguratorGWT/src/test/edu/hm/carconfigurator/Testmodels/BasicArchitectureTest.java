@@ -21,12 +21,16 @@
  * <TR><TD><a href=mailto:janairo1883@yahoo.com>Tchinda Mbiep Charly Raymond</a></TD>Student Informatik<TD></TD>
  * </TABLE>
  */
-package edu.hm.carconfigurator.models;
+package edu.hm.carconfigurator.Testmodels;
 
 import org.junit.Test;
 
 import com.seventytwomiles.architecturerules.AbstractArchitectureRulesConfigurationTest;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class BasicArchitectureTest.
+ */
 public class BasicArchitectureTest extends AbstractArchitectureRulesConfigurationTest {
 
 	/* (non-Javadoc)
@@ -42,8 +46,8 @@ public class BasicArchitectureTest extends AbstractArchitectureRulesConfiguratio
 	}
 
 
-	/**
-	 * @see AbstractArchitectureRulesConfigurationTesttestArchitecture
+	/* (non-Javadoc)
+	 * @see com.seventytwomiles.architecturerules.AbstractArchitectureRulesConfigurationTest#testArchitecture()
 	 */
 	@Test
 	public void testArchitecture() {

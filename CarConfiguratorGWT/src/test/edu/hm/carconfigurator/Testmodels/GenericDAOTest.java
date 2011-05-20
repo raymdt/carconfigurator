@@ -1,7 +1,7 @@
 /**
  * 
  */
-package edu.hm.carconfigurator.models;
+package edu.hm.carconfigurator.Testmodels;
 
 import java.io.IOException;
 
@@ -11,11 +11,12 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import edu.hm.carconfigurator.dbaccess.IGenericDao;
 import edu.hm.carconfigurator.usermanagement.Person;
 
 public class GenericDAOTest extends DatabaseTestClass {
 
-    private IGenericDAO<Person, String> genericDao;
+    private IGenericDao<Person, String> genericDao;
     private Transaction tx;
     
     public GenericDAOTest(String name) throws IOException {
@@ -25,7 +26,7 @@ public class GenericDAOTest extends DatabaseTestClass {
     @Before
     public void setUp() throws Exception {
         super.setUp();
-        genericDao = new GenericDAOImpl<Person, String>(injector.getInstance(SessionFactory.class)){};
+        genericDao = null;
         tx = getSession().beginTransaction();
     }
 
@@ -41,10 +42,10 @@ public class GenericDAOTest extends DatabaseTestClass {
 
     @Test
     public void testFindPersonRalphi() {
-        Object o  = genericDao.findById("Ralphi");
+        Object o  = genericDao.findByID("Ralphi");
         assertNotNull(o);
         Person person = (Person)o;
-        assertEquals("Ralph", person.getFirstName());
+        assertEquals("Ralph", person.getUserName());
     }
     
 }

@@ -1,4 +1,4 @@
-package edu.hm.carconfigurator.models;
+package edu.hm.carconfigurator.Testmodels;
 
 import java.io.FileInputStream;
 
@@ -10,37 +10,30 @@ import org.dbunit.operation.TransactionOperation;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-/**
- * Base class for all tests that use the default (filled) database.
- * @author axel
- *
- */
-public abstract class DatabaseTestClass extends JdbcBasedDBTestCase implements ShareitTestBaseData  {
+
+public abstract class DatabaseTestClass extends JdbcBasedDBTestCase  {
     
     protected final Session session;
     protected final FlatXmlDataSetBuilder datasetBuilder;
-    protected final Injector injector;
 
     public DatabaseTestClass(String name) {
-        super(name);
         datasetBuilder = new FlatXmlDataSetBuilder();
-        injector = Guice.createInjector(new ShareitTestGuiceModule());
-        session = injector.getInstance(SessionFactory.class).getCurrentSession();
+        session = null;
     }
 
     @Override
     protected String getConnectionUrl() {
-        return TEST_DB_URL;
+        return "test-db";
     }
 
     @Override
     protected String getDriverClass() {
-        return ShareitGuiceModule.DRIVER_CLASS;
+        return "Car Configurator Test";
     }
 
     @Override
     protected IDataSet getDataSet() throws Exception {
-        return datasetBuilder.build(new FileInputStream(TEST_DATA_BASE_XML));
+        return datasetBuilder.build(new FileInputStream("Test-db-Path"));
     }
 
     @Override
