@@ -21,55 +21,54 @@
  * <TR><TD><a href=mailto:janairo1883@yahoo.com>Tchinda Mbiep Charly Raymond</a></TD>Student Informatik<TD></TD>
  * </TABLE>
  */
-package edu.hm.carconfigurator.dbaccess.usermanagement;
+package edu.hm.carconfigurator.services;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 import edu.hm.carconfigurator.usermanagement.Person;
 
-@SuppressWarnings("serial")
-public class DaoController implements IDaoController {
+// TODO: Auto-generated Javadoc
+/**
+ * The Class LoginService.
+ */
+public class LoginService extends BaseService {
 
-
-	
-	private final PersonDao persondao;
-
-
-	public DaoController(PersonDao perdao) {
-		this.persondao = perdao;
-
-	}
-
-
-
-	/* (non-Javadoc)
-	 * @see edu.hm.carconfigurator.dbaccess.usermanagement.IDaoController#createUser(edu.hm.carconfigurator.usermanagement.Person)
+	/**
+	 * Instantiates a new login service.
+	 *
+	 * @param sessionf the sessionf
 	 */
-	public void createUser(Person person) {
-
-
-		persondao.makePersitent(person);
-
-
+	public LoginService(SessionFactory sessionf) {
+		super(sessionf);
 	}
 
 
-	public Person createUser(String username, String password, String email) {
-
-			Person person = new Person(username, password, email);
-			persondao.makePersitent(person);
-			return person;
-
-	}
-
-
-	public Person findUser(String username) {
-
-	return  persondao.findByID(username);
+	/**
+	 * Login.
+	 *
+	 * @param username the username
+	 * @param password the password
+	 * @return the login result
+	 */
+	public LoginResult login(String username, String password) {
+		
+		Transaction tx = getSession().beginTransaction();
+		Person user = getController().findUser(username);
+		tx.commit();
+		
+		if(user==null) {
+			return new LoginResult(null, LoginResponseState.USER_NOT_FOUND);
+		}
+		
+		if(!user.isValidPassword(password)) {
+			
+			return new LoginResult(null, LoginResponseState.WRONG_PASSWORD);
+		}
+		
+		return new LoginResult(user, LoginResponseState.SUCESS);
+		
+}
 	
 	
-	}
-
-	public PersonDao getPersondao() {
-		return persondao;
-	}
-
 }

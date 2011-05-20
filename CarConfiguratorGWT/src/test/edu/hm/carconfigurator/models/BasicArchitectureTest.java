@@ -21,48 +21,38 @@
  * <TR><TD><a href=mailto:janairo1883@yahoo.com>Tchinda Mbiep Charly Raymond</a></TD>Student Informatik<TD></TD>
  * </TABLE>
  */
-package edu.hm.carconfigurator.dbaccess;
+package edu.hm.carconfigurator.models;
+
+import org.junit.Test;
+
+import com.seventytwomiles.architecturerules.AbstractArchitectureRulesConfigurationTest;
+
+public class BasicArchitectureTest extends AbstractArchitectureRulesConfigurationTest {
+
+	/* (non-Javadoc)
+	 * @see com.seventytwomiles.architecturerules.AbstractArchitectureRulesConfigurationTest#getConfigurationFileName()
+	 */
+	public String getConfigurationFileName() {
+
+		/**
+		 * Provide the name of the rules configuration file.
+		 * File file is loaded from the classpath.
+		 */
+		return "architecture-rules.xml";
+	}
 
 
-import java.io.Serializable;
+	/**
+	 * @see AbstractArchitectureRulesConfigurationTesttestArchitecture
+	 */
+	@Test
+	public void testArchitecture() {
 
-// TODO: Auto-generated Javadoc
-/**
- * The Interface IGenericDao.
- *
- * @param <T> the generic type
- * @param <ID> the generic type
- */
-public interface IGenericDao<T, ID extends Serializable> extends Serializable{
-
-	/**
-	 * Find by id.
-	 *
-	 * @param id the id
-	 * @return the t
-	 */
-	public T findByID(ID id);
-	
-	/**
-	 * Make persitent.
-	 *
-	 * @param t the t
-	 */
-	public void makePersitent(T t);
-	
-	/**
-	 * Update.
-	 *
-	 * @param t the t
-	 */
-	public void update(T t);
-	
-	/**
-	 * Make transient.
-	 *
-	 * @param t the t
-	 */
-	public void makeTransient(T t);
-	
-	
+		/**
+		 * Run the test via doTest(). If any rules are broken,
+		 * or if the configuration can not be loaded properly,
+		 * then the appropriate Exception will be thrown.
+		 */
+		assertTrue(doTests());
+	}
 }

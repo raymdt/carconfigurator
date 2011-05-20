@@ -21,55 +21,20 @@
  * <TR><TD><a href=mailto:janairo1883@yahoo.com>Tchinda Mbiep Charly Raymond</a></TD>Student Informatik<TD></TD>
  * </TABLE>
  */
-package edu.hm.carconfigurator.dbaccess.usermanagement;
+package edu.hm.carconfigurator.services;
 
-import edu.hm.carconfigurator.usermanagement.Person;
+// TODO: Auto-generated Javadoc
+/**
+ * The Enum LoginResponseState.
+ */
+public enum LoginResponseState {
 
-@SuppressWarnings("serial")
-public class DaoController implements IDaoController {
-
-
+	/** The SUCESS. */
+	SUCESS,
 	
-	private final PersonDao persondao;
-
-
-	public DaoController(PersonDao perdao) {
-		this.persondao = perdao;
-
-	}
-
-
-
-	/* (non-Javadoc)
-	 * @see edu.hm.carconfigurator.dbaccess.usermanagement.IDaoController#createUser(edu.hm.carconfigurator.usermanagement.Person)
-	 */
-	public void createUser(Person person) {
-
-
-		persondao.makePersitent(person);
-
-
-	}
-
-
-	public Person createUser(String username, String password, String email) {
-
-			Person person = new Person(username, password, email);
-			persondao.makePersitent(person);
-			return person;
-
-	}
-
-
-	public Person findUser(String username) {
-
-	return  persondao.findByID(username);
+	/** The WRON g_ password. */
+	WRONG_PASSWORD,
 	
-	
-	}
-
-	public PersonDao getPersondao() {
-		return persondao;
-	}
-
+	/** The USE r_ no t_ found. */
+	USER_NOT_FOUND
 }

@@ -1,3 +1,26 @@
+/**
+ ******************************************************************
+ ******************************************************************
+ * 				   SOFTWARE ENGINEERING II SS-2009
+ *                 * * CAR CONFIGURATOR                           *
+ *                                                                *
+ * 				   * * VERSION 1.0                                *
+ * 			                                                      *
+ * 				   * * Informatik cs.hm.edu                       *
+ * 						                                          *
+ ******************************************************************
+ ******************************************************************
+ * 
+ * Copyright (c) SS 2011 Charly Tchinda && Eric Pokam
+ * 
+ * 
+ *  * @author
+ * <TABLE WIDTH=360>
+ * <TR><TD><b>authors name</b></TD><TD><b>Occupation:</b></TD>
+ * <TR><TD><a href=mailto:ericpokam@yahoo.fr>Eric Pokam</a></TD> <TD> <b>Student Informatik</b> </TD></TR>
+ * <TR><TD><a href=mailto:janairo1883@yahoo.com>Tchinda Mbiep Charly Raymond</a></TD>Student Informatik<TD></TD>
+ * </TABLE>
+ */
 package edu.hm.carconfigurator.client;
 
 import com.google.gwt.user.client.Window;
@@ -13,10 +36,21 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Login.
+ */
 public class Login extends Composite {
+	
+	/** The benutzernametb. */
 	private TextBox benutzernametb;
+	
+	/** The passwordtb. */
 	private TextBox passwordtb;
 
+	/**
+	 * Instantiates a new login.
+	 */
 	public Login() {
 		
 		VerticalPanel verticalPanel = new VerticalPanel();

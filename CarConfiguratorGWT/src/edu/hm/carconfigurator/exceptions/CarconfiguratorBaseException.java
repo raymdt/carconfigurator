@@ -21,55 +21,34 @@
  * <TR><TD><a href=mailto:janairo1883@yahoo.com>Tchinda Mbiep Charly Raymond</a></TD>Student Informatik<TD></TD>
  * </TABLE>
  */
-package edu.hm.carconfigurator.dbaccess.usermanagement;
+package edu.hm.carconfigurator.exceptions;
 
-import edu.hm.carconfigurator.usermanagement.Person;
-
-@SuppressWarnings("serial")
-public class DaoController implements IDaoController {
-
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CarconfiguratorBaseException.
+ */
+public abstract class CarconfiguratorBaseException extends Exception {
 
 	
-	private final PersonDao persondao;
-
-
-	public DaoController(PersonDao perdao) {
-		this.persondao = perdao;
-
-	}
-
-
-
-	/* (non-Javadoc)
-	 * @see edu.hm.carconfigurator.dbaccess.usermanagement.IDaoController#createUser(edu.hm.carconfigurator.usermanagement.Person)
+	
+	/**
+	 * Instantiates a new carconfigurator base exception.
 	 */
-	public void createUser(Person person) {
-
-
-		persondao.makePersitent(person);
-
-
+	public CarconfiguratorBaseException() {
+		super();
 	}
-
-
-	public Person createUser(String username, String password, String email) {
-
-			Person person = new Person(username, password, email);
-			persondao.makePersitent(person);
-			return person;
-
+	
+	/**
+	 * Instantiates a new carconfigurator base exception.
+	 *
+	 * @param message the message
+	 */
+	public CarconfiguratorBaseException(String message) {
+		
+		super(message);
 	}
-
-
-	public Person findUser(String username) {
-
-	return  persondao.findByID(username);
 	
 	
-	}
-
-	public PersonDao getPersondao() {
-		return persondao;
-	}
-
+	
+	
 }

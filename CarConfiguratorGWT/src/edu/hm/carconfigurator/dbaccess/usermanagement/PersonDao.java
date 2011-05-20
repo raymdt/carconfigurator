@@ -22,21 +22,6 @@
  * </TABLE>
  */
 package edu.hm.carconfigurator.dbaccess.usermanagement;
-/**
- ******************************************************************
- ******************************************************************
- *                 * * CLOUD-DEMONSTRATOR                         *
- *                                                                *
- * 				   * * VERSION 1.0                                *
- * 			                                                      *
- * 				   * * Frauenhofer SIT München                    *
- * 						                                          *
- ******************************************************************
- ******************************************************************
- * 
- * Copyright (c) 2010 Fraunhofer Institute for Secure Information Technology  
- * 
- */
 
 import java.util.List;
 

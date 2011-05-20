@@ -1,8 +1,7 @@
 /**
  ******************************************************************
  ******************************************************************
- * 				* * Software Engineering II
- * 
+ * 				   SOFTWARE ENGINEERING II SS-2009
  *                 * * CAR CONFIGURATOR                           *
  *                                                                *
  * 				   * * VERSION 1.0                                *
@@ -32,6 +31,7 @@ import java.lang.reflect.Type;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class GenericDaoImpl.
  *
@@ -64,6 +64,9 @@ public class GenericDaoImpl<T , ID extends Serializable> implements IGenericDao<
 	}
 	
 
+	/* (non-Javadoc)
+	 * @see edu.hm.carconfigurator.dbaccess.IGenericDao#findByID(java.io.Serializable)
+	 */
 	@SuppressWarnings("unchecked")
 	public T findByID(Serializable id) {
 
@@ -83,16 +86,25 @@ public class GenericDaoImpl<T , ID extends Serializable> implements IGenericDao<
 	}
 
 
+	/* (non-Javadoc)
+	 * @see edu.hm.carconfigurator.dbaccess.IGenericDao#makePersitent(java.lang.Object)
+	 */
 	public void makePersitent(T t) {
 
 		getSession().save(t);
 	}
 
+	/* (non-Javadoc)
+	 * @see edu.hm.carconfigurator.dbaccess.IGenericDao#update(java.lang.Object)
+	 */
 	public void update(T t) {
 
 		getSession().update(t);
 	}
 
+	/* (non-Javadoc)
+	 * @see edu.hm.carconfigurator.dbaccess.IGenericDao#makeTransient(java.lang.Object)
+	 */
 	@Override
 	public void makeTransient(T t) {
 

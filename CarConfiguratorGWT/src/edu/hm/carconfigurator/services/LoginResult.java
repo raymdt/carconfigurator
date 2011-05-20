@@ -21,55 +21,55 @@
  * <TR><TD><a href=mailto:janairo1883@yahoo.com>Tchinda Mbiep Charly Raymond</a></TD>Student Informatik<TD></TD>
  * </TABLE>
  */
-package edu.hm.carconfigurator.dbaccess.usermanagement;
+package edu.hm.carconfigurator.services;
 
 import edu.hm.carconfigurator.usermanagement.Person;
 
-@SuppressWarnings("serial")
-public class DaoController implements IDaoController {
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class LoginResult.
+ */
+public class LoginResult {
 
 	
-	private final PersonDao persondao;
 
-
-	public DaoController(PersonDao perdao) {
-		this.persondao = perdao;
-
-	}
-
-
-
-	/* (non-Javadoc)
-	 * @see edu.hm.carconfigurator.dbaccess.usermanagement.IDaoController#createUser(edu.hm.carconfigurator.usermanagement.Person)
+	/** The person. */
+	private final Person person;
+	
+	/** The status. */
+	private final LoginResponseState status;
+	
+	
+	/**
+	 * Instantiates a new login result.
+	 *
+	 * @param person the person
+	 * @param status the status
 	 */
-	public void createUser(Person person) {
-
-
-		persondao.makePersitent(person);
-
-
+	public LoginResult(Person person, LoginResponseState status) {
+		
+		this.person = person;
+		this.status = status;
 	}
 
 
-	public Person createUser(String username, String password, String email) {
-
-			Person person = new Person(username, password, email);
-			persondao.makePersitent(person);
-			return person;
-
+	/**
+	 * Gets the person.
+	 *
+	 * @return the person
+	 */
+	public Person getPerson() {
+		return person;
 	}
 
 
-	public Person findUser(String username) {
-
-	return  persondao.findByID(username);
-	
-	
+	/**
+	 * Gets the status.
+	 *
+	 * @return the status
+	 */
+	public LoginResponseState getStatus() {
+		return status;
 	}
-
-	public PersonDao getPersondao() {
-		return persondao;
-	}
-
 }

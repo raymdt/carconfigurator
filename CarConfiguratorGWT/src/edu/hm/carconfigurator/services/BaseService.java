@@ -21,55 +21,67 @@
  * <TR><TD><a href=mailto:janairo1883@yahoo.com>Tchinda Mbiep Charly Raymond</a></TD>Student Informatik<TD></TD>
  * </TABLE>
  */
-package edu.hm.carconfigurator.dbaccess.usermanagement;
+package edu.hm.carconfigurator.services;
 
-import edu.hm.carconfigurator.usermanagement.Person;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
-@SuppressWarnings("serial")
-public class DaoController implements IDaoController {
+import edu.hm.carconfigurator.dbaccess.usermanagement.IDaoController;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class BaseService.
+ */
+public class BaseService {
 
 
+
+	/** The sessionfactory. */
+	private final SessionFactory sessionfactory;
 	
-	private final PersonDao persondao;
-
-
-	public DaoController(PersonDao perdao) {
-		this.persondao = perdao;
-
-	}
-
-
-
-	/* (non-Javadoc)
-	 * @see edu.hm.carconfigurator.dbaccess.usermanagement.IDaoController#createUser(edu.hm.carconfigurator.usermanagement.Person)
+	/** The controller. */
+	private IDaoController controller;
+	
+	
+	/**
+	 * Gets the session.
+	 *
+	 * @return the session
 	 */
-	public void createUser(Person person) {
-
-
-		persondao.makePersitent(person);
-
-
+	public Session getSession() {
+		return sessionfactory.getCurrentSession();
 	}
 
 
-	public Person createUser(String username, String password, String email) {
 
-			Person person = new Person(username, password, email);
-			persondao.makePersitent(person);
-			return person;
 
+
+	/**
+	 * Instantiates a new base service.
+	 *
+	 * @param sessionf the sessionf
+	 */
+	public BaseService(SessionFactory sessionf) {
+		this.sessionfactory = sessionf;
 	}
-
-
-	public Person findUser(String username) {
-
-	return  persondao.findByID(username);
 	
-	
+
+	/**
+	 * Gets the controller.
+	 *
+	 * @return the controller
+	 */
+	public IDaoController getController() {
+		return controller;
 	}
 
-	public PersonDao getPersondao() {
-		return persondao;
-	}
 
+	/**
+	 * Sets the controller.
+	 *
+	 * @param controller the new controller
+	 */
+	public void setController(IDaoController controller) {
+		this.controller = controller;
+	}
 }
