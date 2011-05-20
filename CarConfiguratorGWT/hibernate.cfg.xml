@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- datasource connection properties -->
+        <property name="connection.url">
+         jdbc:mysql://localhost/cloud
+        </property>
+        <property name="connection.driver_class">
+            com.mysql.jdbc.Driver
+        </property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">frontend</property>
+        <!-- dialect for MySQL -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.use_outer_join">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="current_session_context_class">thread</property>
+		<property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+
+        <mapping class="sit.fraunhofer.cloud_demo.models.usermanagement.Person"/>
+    </session-factory>
+</hibernate-configuration>
+
