@@ -1,6 +1,6 @@
-package sit.fraunhofer.cloud_demo.dbaccess.usermanagement;
+package edu.hm.carconfigurator.dbaccess.usermanagement;
 
-import sit.fraunhofer.cloud_demo.models.usermanagement.Person;
+import usermanagement.Person;
 
 @SuppressWarnings("serial")
 public class DaoController implements IDaoController {

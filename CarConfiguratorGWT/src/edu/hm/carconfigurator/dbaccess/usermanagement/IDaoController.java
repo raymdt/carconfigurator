@@ -1,8 +1,9 @@
-package sit.fraunhofer.cloud_demo.dbaccess.usermanagement;
+package edu.hm.carconfigurator.dbaccess.usermanagement;
+
 
 import java.io.Serializable;
 
-import sit.fraunhofer.cloud_demo.models.usermanagement.Person;
+import usermanagement.Person;
 
 public interface IDaoController extends Serializable{
 

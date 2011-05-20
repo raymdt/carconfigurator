@@ -1,19 +1,28 @@
 /**
  ******************************************************************
  ******************************************************************
- *                 * * CLOUD-DEMONSTRATOR                         *
+ * 				* * Software Engineering II
+ * 
+ *                 * * CAR CONFIGURATOR                           *
  *                                                                *
  * 				   * * VERSION 1.0                                *
  * 			                                                      *
- * 				   * * Frauenhofer SIT München                    *
+ * 				   * * Informatik cs.hm.edu                       *
  * 						                                          *
  ******************************************************************
  ******************************************************************
  * 
- * Copyright (c) 2010 Fraunhofer Institute for Secure Information Technology  
+ * Copyright (c) SS 2011 Charly Tchinda && Eric Pokam
  * 
+ * 
+ *  * @author
+ * <TABLE WIDTH=360>
+ * <TR><TD><b>authors name</b></TD><TD><b>Occupation:</b></TD>
+ * <TR><TD><a href=mailto:ericpokam@yahoo.fr>Eric Pokam</a></TD> <TD> <b>Student Informatik</b> </TD></TR>
+ * <TR><TD><a href=mailto:janairo1883@yahoo.com>Tchinda Mbiep Charly Raymond</a></TD>Student Informatik<TD></TD>
+ * </TABLE>
  */
-package sit.fraunhofer.cloud_demo.dbaccess;
+package edu.hm.carconfigurator.dbaccess;
 
 
 import java.io.Serializable;
@@ -23,16 +32,8 @@ import java.lang.reflect.Type;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class GenericDaoImpl.
- * 
- * * @author
- * <TABLE WIDTH=360>
- * <TR><TD><b>author´s name</b></TD><TD><b>Occupation:</b></TD>
- * <TR><TD><a href=mailto:cmalcher@napcabs.com>Camilla malcher</a></TD> <TD> <b>Hiwi</b> </TD></TR>
- * <TR><TD><a href=mailto:Charly.Mbiep@sit.frauenhofer.de>Tchinda Mbiep Charly Raymond</a></TD>praktikant<TD></TD>
- * </TABLE>
  *
  * @param <T> the generic type
  * @param <ID> the generic type
@@ -62,9 +63,7 @@ public class GenericDaoImpl<T , ID extends Serializable> implements IGenericDao<
 		
 	}
 	
-	/* (non-Javadoc)
-	 * @see sit.fraunhofer.cloud_demo.dbaccess.IGenericDao#findByID(java.io.Serializable)
-	 */
+
 	@SuppressWarnings("unchecked")
 	public T findByID(Serializable id) {
 
@@ -83,25 +82,18 @@ public class GenericDaoImpl<T , ID extends Serializable> implements IGenericDao<
 		return persistentClass;
 	}
 
-	/* (non-Javadoc)
-	 * @see sit.fraunhofer.cloud_demo.dbaccess.IGenericDao#makePersitent(java.lang.Object)
-	 */
+
 	public void makePersitent(T t) {
 
 		getSession().save(t);
 	}
 
-	/* (non-Javadoc)
-	 * @see sit.fraunhofer.cloud_demo.dbaccess.IGenericDao#update(java.lang.Object)
-	 */
 	public void update(T t) {
 
 		getSession().update(t);
 	}
 
-	/* (non-Javadoc)
-	 * @see sit.fraunhofer.cloud_demo.dbaccess.IGenericDao#makeTransient(java.lang.Object)
-	 */
+	@Override
 	public void makeTransient(T t) {
 
 		getSession().delete(t);
