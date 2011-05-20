@@ -15,6 +15,7 @@
  */
 package sit.fraunhofer.cloud_demo.dbaccess;
 
+
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
