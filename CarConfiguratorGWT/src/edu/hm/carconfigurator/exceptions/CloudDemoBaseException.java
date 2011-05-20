@@ -1,4 +1,4 @@
-package sit.fraunhofer.cloud_demo.exceptions;
+package edu.hm.carconfigurator.exceptions;
 
 public abstract class CloudDemoBaseException extends Exception {
 

@@ -1,4 +1,4 @@
-package sit.fraunhofer.cloud_demo.services;
+package edu.carconfigurator.services;
 
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;

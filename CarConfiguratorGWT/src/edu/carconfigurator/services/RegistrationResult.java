@@ -1,4 +1,4 @@
-package sit.fraunhofer.cloud_demo.services;
+package edu.carconfigurator.services;
 
 import sit.fraunhofer.cloud_demo.models.usermanagement.Person;
 

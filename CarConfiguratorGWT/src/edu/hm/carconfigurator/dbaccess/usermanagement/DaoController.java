@@ -1,6 +1,6 @@
 package edu.hm.carconfigurator.dbaccess.usermanagement;
 
-import usermanagement.Person;
+import edu.hm.carconfigurator.usermanagement.Person;
 
 @SuppressWarnings("serial")
 public class DaoController implements IDaoController {

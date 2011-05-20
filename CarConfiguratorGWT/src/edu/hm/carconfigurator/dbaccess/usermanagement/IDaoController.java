@@ -3,7 +3,8 @@ package edu.hm.carconfigurator.dbaccess.usermanagement;
 
 import java.io.Serializable;
 
-import usermanagement.Person;
+import edu.hm.carconfigurator.usermanagement.Person;
+
 
 public interface IDaoController extends Serializable{
 

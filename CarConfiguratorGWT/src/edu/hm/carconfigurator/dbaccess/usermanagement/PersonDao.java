@@ -43,8 +43,8 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 
-import usermanagement.Person;
 import edu.hm.carconfigurator.dbaccess.GenericDaoImpl;
+import edu.hm.carconfigurator.usermanagement.Person;
 
 
 // TODO: Auto-generated Javadoc

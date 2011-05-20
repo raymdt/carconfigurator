@@ -13,7 +13,7 @@
  * Copyright (c) 2010 Fraunhofer Institute for Secure Information Technology  
  * 
  */
-package sit.fraunhofer.cloud_demo.services;
+package edu.carconfigurator.services;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
