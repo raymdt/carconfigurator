@@ -52,5 +52,9 @@ public class CarConfigurator implements EntryPoint {
 		
 		Label lblBienvenuto = new Label("Bienvenuto");
 		rootPanel.add(lblBienvenuto);
+		
+		RegisterForm_gwt register = new RegisterForm_gwt();
+		
+		rootPanel.add(register);
 	}
 }

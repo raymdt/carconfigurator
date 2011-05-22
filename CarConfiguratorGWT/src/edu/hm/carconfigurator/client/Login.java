@@ -92,9 +92,9 @@ public class Login extends Composite {
 		btnEinloggen.setStyleName("configurator-anmeldbutton");
 		btnEinloggen.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
-				if(passwordtb.getText().length()==0 || benutzernametb.getText().length()==0){
-					Window.alert("Voursm   ");
-				}
+				//if(passwordtb.getText().length()==0 || benutzernametb.getText().length()==0){
+					Window.alert("Database not reacheable. Please Contact Charly ");
+			//	}
 			}
 		});
 		flexTable.setWidget(3, 1, btnEinloggen);

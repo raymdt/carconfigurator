@@ -7,7 +7,7 @@
     <session-factory>
         <!-- datasource connection properties -->
         <property name="connection.url">
-         jdbc:mysql://localhost/cloud
+         jdbc:mysql://localhost/carconfigurator
         </property>
         <property name="connection.driver_class">
             com.mysql.jdbc.Driver
@@ -25,7 +25,7 @@
 		<property name="current_session_context_class">thread</property>
 		<property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
 
-        <mapping class="sit.fraunhofer.cloud_demo.models.usermanagement.Person"/>
+        <mapping class="edu.hm.carconfigurator.usermanagement.Person"/>
     </session-factory>
 </hibernate-configuration>
 

@@ -49,6 +49,11 @@ public class PersonDAOTest extends DatabaseTestClass {
         Person person = personDao.findUser("bla");
         assertNull("Should not find anything with username 'bla'", person);
     }
+    @Test
+    public void testFindNonExistingUser2() {
+    	Person person = personDao.findUser("bla");
+    	assertNull("Should not find anything with username 'bla'", person);
+    }
     
     @Test
     public void testFindUserAddam() {
