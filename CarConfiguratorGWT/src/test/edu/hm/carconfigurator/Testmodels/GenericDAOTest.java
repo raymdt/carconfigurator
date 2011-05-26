@@ -5,14 +5,13 @@ package edu.hm.carconfigurator.Testmodels;
 
 import java.io.IOException;
 
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import edu.hm.carconfigurator.client.Person;
 import edu.hm.carconfigurator.dbaccess.IGenericDao;
-import edu.hm.carconfigurator.usermanagement.Person;
 
 public class GenericDAOTest extends DatabaseTestClass {
 

@@ -21,7 +21,7 @@
  * <TR><TD><a href=mailto:janairo1883@yahoo.com>Tchinda Mbiep Charly Raymond</a></TD>Student Informatik<TD></TD>
  * </TABLE>
  */
-package edu.hm.carconfigurator.usermanagement;
+package edu.hm.carconfigurator.client;
 
 import java.io.Serializable;
 
@@ -34,16 +34,15 @@ import javax.persistence.Table;
 /**
  * The Class Person.
  */
-@Entity
-@Table(name = "person")
+
 public class Person implements Serializable {
 	
 
 	/** The Constant serialVersionUID. */
-	private static final long serialVersionUID = 2767822461474953029L;
+	private static final long serialVersionUID = 1L;
 
 	/** The user name. */
-	@Id
+	
 	private String userName;
 	
 	/** The password. */
@@ -105,7 +104,6 @@ public class Person implements Serializable {
 	 *
 	 * @param password the new password
 	 */
-	@Column(name = "password")
 	public void setPassword(String password) {
 		this.password = password;
 	}
@@ -115,7 +113,6 @@ public class Person implements Serializable {
 	 *
 	 * @return the email
 	 */
-	@Column(name = "email")
 	public String getEmail() {
 		return email;
 	}

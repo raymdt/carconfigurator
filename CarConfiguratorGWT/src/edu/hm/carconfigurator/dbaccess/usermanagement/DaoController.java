@@ -23,7 +23,7 @@
  */
 package edu.hm.carconfigurator.dbaccess.usermanagement;
 
-import edu.hm.carconfigurator.usermanagement.Person;
+import edu.hm.carconfigurator.client.Person;
 
 @SuppressWarnings("serial")
 public class DaoController implements IDaoController {

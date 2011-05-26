@@ -4,8 +4,8 @@ import javax.servlet.http.HttpSession;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
+import edu.hm.carconfigurator.client.Person;
 import edu.hm.carconfigurator.client.Service;
-import edu.hm.carconfigurator.usermanagement.Person;
 
 public class ServiceImpl  extends RemoteServiceServlet implements Service{
 

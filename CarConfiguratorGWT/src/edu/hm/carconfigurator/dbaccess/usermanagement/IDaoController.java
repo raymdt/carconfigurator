@@ -26,7 +26,7 @@ package edu.hm.carconfigurator.dbaccess.usermanagement;
 
 import java.io.Serializable;
 
-import edu.hm.carconfigurator.usermanagement.Person;
+import edu.hm.carconfigurator.client.Person;
 
 
 // TODO: Auto-generated Javadoc

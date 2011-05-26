@@ -13,7 +13,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import edu.hm.carconfigurator.usermanagement.Person;
+import edu.hm.carconfigurator.client.Person;
 
 public class DataAccessFacadeTest  {
     private Person person;
