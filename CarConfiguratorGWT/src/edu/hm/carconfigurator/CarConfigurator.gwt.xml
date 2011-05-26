@@ -3,5 +3,6 @@
 	<inherits name="com.google.gwt.user.theme.standard.Standard"/>
 	<inherits name="com.extjs.gxt.ui.GXT"/>
 	<entry-point class="edu.hm.carconfigurator.client.CarConfigurator"/>
+	 <servlet path='/MyService' class='edu.hm.carconfigurator.server.ServiceImpl'/>
 	
 </module>

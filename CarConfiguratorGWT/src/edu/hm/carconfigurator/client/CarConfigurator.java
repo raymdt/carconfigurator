@@ -27,14 +27,11 @@
 package edu.hm.carconfigurator.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+
+import edu.hm.carconfigurator.usermanagement.Person;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -47,10 +44,34 @@ public class CarConfigurator implements EntryPoint {
    * 
    * @see com.google.gwt.core.client.EntryPoint#onModuleLoad()
    */
+  
+  private static CarConfigurator singleton;
+  
+  public static CarConfigurator get() {
+    return singleton;
+  }
+  
+  
   public void onModuleLoad() {
+singleton=this;
+setLoginPage();
+  }
+  
+  public void setHomePage(Person person) {
+    
+    HomePage homePage = new HomePage(person);
+    RootPanel.get().clear();
+    RootPanel.get().add(homePage);
+    
+  }
+  
+  
+  private void setLoginPage() {
+    
     RootPanel rootPanel = RootPanel.get();
     rootPanel.setSize("100%", "100%");
     rootPanel.setStyleName("configurator-global");
+
 
     VerticalPanel vPanel = new VerticalPanel();
 
@@ -64,5 +85,6 @@ public class CarConfigurator implements EntryPoint {
     vPanel.add(register);
 
     rootPanel.add(vPanel);
+    
   }
 }

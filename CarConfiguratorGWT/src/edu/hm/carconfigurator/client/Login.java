@@ -23,18 +23,20 @@
  */
 package edu.hm.carconfigurator.client;
 
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.FlexTable;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.client.ui.HasVerticalAlignment;
-import com.google.gwt.user.client.ui.CheckBox;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.rpc.ServiceDefTarget;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.CheckBox;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.FlexTable;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
+
+import edu.hm.carconfigurator.usermanagement.Person;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -47,6 +49,8 @@ public class Login extends Composite {
 	
 	/** The passwordtb. */
 	private TextBox passwordtb;
+	
+	private Label error = new Label();
 
 	/**
 	 * Instantiates a new login.
@@ -92,9 +96,8 @@ public class Login extends Composite {
 		btnEinloggen.setStyleName("configurator-anmeldbutton");
 		btnEinloggen.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
-				//if(passwordtb.getText().length()==0 || benutzernametb.getText().length()==0){
-					Window.alert("Database not reacheable. Please Contact Charly ");
-			//	}
+		
+			    checkLogin(benutzernametb.getValue(), passwordtb.getValue());
 			}
 		});
 		flexTable.setWidget(3, 1, btnEinloggen);
@@ -104,6 +107,49 @@ public class Login extends Composite {
 		lblAllRightReserved.setStyleName("configurator-copyright");
 		flexTable.setWidget(4, 1, lblAllRightReserved);
 		lblAllRightReserved.setHeight("154px");
+		flexTable.setWidget(5, 1, error);
 	}
+	
+	
+	private void checkLogin(String username, String password) {
+	  setError("Login Test für "+username);
+	  
+	  AsyncCallback callback = new AsyncCallback() {
 
+      @Override
+      public void onFailure(Throwable caught) {
+        
+       caught.getMessage();
+      }
+      
+
+      @Override
+      public void onSuccess(Object result) {
+
+        Person user = (Person)result;
+        if(user!=null) {
+          
+          CarConfigurator.get().setHomePage(user);
+        }
+        else {
+setError("Falscher Benutzername oder Passwort");
+        }
+      }
+    };
+    
+    getService().checkLogin(username, password, callback);
+	}
+	
+	private ServiceAsync getService() {
+	  ServiceAsync svc = (ServiceAsync)GWT.create(Service.class);
+	  ServiceDefTarget endpoint = (ServiceDefTarget)svc;
+	  endpoint.setServiceEntryPoint(GWT.getModuleBaseURL()+"/Service");
+	  return svc;
+	}
+	
+	
+	
+public void setError(String err) {
+  error.setText(err);
+}
 }
