@@ -23,7 +23,9 @@ public class ServiceImpl  extends RemoteServiceServlet implements Service{
   @Override
   public Person checkLogin(String username, String passwort) {
     
-    if(username.equalsIgnoreCase("carconfigurator")) {
+    System.out.println("HHHHHHHHHHHHHHHHHHIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIH");
+    
+    if(username.equalsIgnoreCase("car")) {
       Person user = new Person();
       user.setUserName(username);
       setUserInSession(user);

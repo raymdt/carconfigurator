@@ -66,9 +66,8 @@ setLoginPage();
   
   private void setLoginPage() {
     
-    RootPanel rootPanel = RootPanel.get();
-    rootPanel.setSize("100%", "100%");
-    rootPanel.setStyleName("configurator-global");
+    RootPanel.get().setSize("100%", "100%");
+    RootPanel.get().setStyleName("configurator-global");
 
 
     VerticalPanel vPanel = new VerticalPanel();
@@ -82,7 +81,7 @@ setLoginPage();
     RegisterPanelExt register = new RegisterPanelExt();
     vPanel.add(register);
 
-    rootPanel.add(vPanel);
+    RootPanel.get().add(vPanel);
     
   }
 }
