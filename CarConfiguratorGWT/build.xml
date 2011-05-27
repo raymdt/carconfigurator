@@ -14,7 +14,7 @@
   <property name="build" value="./build"/>
 
   <!-- Java sources of the unit tests                    -->
-  <property name="junit" value="./src/test"/>
+  <property name="junit" value="./junit"/>
 
   <!-- class files (compiled Java)                       -->
   <property name="classes" value="${build}/classes"/>
@@ -29,7 +29,11 @@
   <path id="classpath_default">
     <pathelement path="${classes}"/>
     <!-- the javadoc classes are in this package -->
-    <pathelement path="${java.home}/../lib/tools.jar"/>
+    <pathelement path="C:/Program Files/Java/jdk1.6.0_25/lib/tools.jar"/>
+    <pathelement path="D:\entwicklung\eclipses\eclipse _GWT\plugins\com.google.gwt.eclipse.sdkbundle_2.3.0.r36v201104261928"/>
+    <pathelement path="C:/Program Files/Java/jdk1.6.0_25/lib/tools.jar"/>
+    <pathelement path="C:/Program Files/Java/jdk1.6.0_25/lib/tools.jar"/>
+    <pathelement path="C:/Program Files/Java/jdk1.6.0_25/lib/tools.jar"/>
 
     <fileset dir="${lib}">
        <include name="**/*.jar"/>
