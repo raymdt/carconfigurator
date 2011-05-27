@@ -1,0 +1,417 @@
+Buildfile: D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build.xml
+
+clean:
+   [delete] Deleting directory D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build\classes
+   [delete] Deleting directory D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build
+
+prepare:
+    [mkdir] Created dir: D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build
+    [mkdir] Created dir: D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build\classes
+
+compile:
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build.xml:61: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 31 source files to D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build\classes
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\CarConfigurator.java:29: package com.google.gwt.core.client does not exist
+    [javac] import com.google.gwt.core.client.EntryPoint;
+    [javac]                                  ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\CarConfigurator.java:30: package com.google.gwt.user.client.ui does not exist
+    [javac] import com.google.gwt.user.client.ui.Label;
+    [javac]                                     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\CarConfigurator.java:31: package com.google.gwt.user.client.ui does not exist
+    [javac] import com.google.gwt.user.client.ui.RootPanel;
+    [javac]                                     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\CarConfigurator.java:32: package com.google.gwt.user.client.ui does not exist
+    [javac] import com.google.gwt.user.client.ui.VerticalPanel;
+    [javac]                                     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\CarConfigurator.java:38: cannot find symbol
+    [javac] symbol: class EntryPoint
+    [javac] public class CarConfigurator implements EntryPoint {
+    [javac]                                         ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\HomePage.java:7: cannot access com.google.gwt.user.client.ui.Widget
+    [javac] class file for com.google.gwt.user.client.ui.Widget not found
+    [javac] public class HomePage  extends Composite{
+    [javac]        ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:29: package com.google.gwt.core.client does not exist
+    [javac] import com.google.gwt.core.client.GWT;
+    [javac]                                  ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:30: package com.google.gwt.event.dom.client does not exist
+    [javac] import com.google.gwt.event.dom.client.ClickEvent;
+    [javac]                                       ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:31: package com.google.gwt.event.dom.client does not exist
+    [javac] import com.google.gwt.event.dom.client.ClickHandler;
+    [javac]                                       ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:32: package com.google.gwt.user.client does not exist
+    [javac] import com.google.gwt.user.client.Window;
+    [javac]                                  ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:33: package com.google.gwt.user.client.rpc does not exist
+    [javac] import com.google.gwt.user.client.rpc.AsyncCallback;
+    [javac]                                      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:34: package com.google.gwt.user.client.rpc does not exist
+    [javac] import com.google.gwt.user.client.rpc.ServiceDefTarget;
+    [javac]                                      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:35: package com.google.gwt.user.client.ui does not exist
+    [javac] import com.google.gwt.user.client.ui.Button;
+    [javac]                                     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:36: package com.google.gwt.user.client.ui does not exist
+    [javac] import com.google.gwt.user.client.ui.CheckBox;
+    [javac]                                     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:37: package com.google.gwt.user.client.ui does not exist
+    [javac] import com.google.gwt.user.client.ui.Composite;
+    [javac]                                     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:38: package com.google.gwt.user.client.ui does not exist
+    [javac] import com.google.gwt.user.client.ui.FlexTable;
+    [javac]                                     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:39: package com.google.gwt.user.client.ui does not exist
+    [javac] import com.google.gwt.user.client.ui.Label;
+    [javac]                                     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:40: package com.google.gwt.user.client.ui does not exist
+    [javac] import com.google.gwt.user.client.ui.TextBox;
+    [javac]                                     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:41: package com.google.gwt.user.client.ui does not exist
+    [javac] import com.google.gwt.user.client.ui.VerticalPanel;
+    [javac]                                     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:47: cannot find symbol
+    [javac] symbol: class Composite
+    [javac] public class Login extends Composite {
+    [javac]                            ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:50: cannot find symbol
+    [javac] symbol  : class TextBox
+    [javac] location: class edu.hm.carconfigurator.client.Login
+    [javac]   private TextBox benutzernametb;
+    [javac]           ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:53: cannot find symbol
+    [javac] symbol  : class TextBox
+    [javac] location: class edu.hm.carconfigurator.client.Login
+    [javac]   private TextBox passwordtb;
+    [javac]           ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:55: cannot find symbol
+    [javac] symbol  : class Label
+    [javac] location: class edu.hm.carconfigurator.client.Login
+    [javac]   private Label error = new Label();
+    [javac]           ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\ServiceAsync.java:3: package com.google.gwt.user.client.rpc does not exist
+    [javac] import com.google.gwt.user.client.rpc.AsyncCallback;
+    [javac]                                      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\ServiceAsync.java:7: cannot find symbol
+    [javac] symbol  : class AsyncCallback
+    [javac] location: interface edu.hm.carconfigurator.client.ServiceAsync
+    [javac]   public void checkLogin(String username, String passwort, AsyncCallback callback);
+    [javac]                                                            ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\RegisterForm_gwt.java:4: package com.google.gwt.user.client.ui does not exist
+    [javac] import com.google.gwt.user.client.ui.Button;
+    [javac]                                     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\RegisterForm_gwt.java:5: package com.google.gwt.user.client.ui does not exist
+    [javac] import com.google.gwt.user.client.ui.FormPanel;
+    [javac]                                     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\RegisterForm_gwt.java:6: package com.google.gwt.user.client.ui does not exist
+    [javac] import com.google.gwt.user.client.ui.TextBox;
+    [javac]                                     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\RegisterForm_gwt.java:8: cannot find symbol
+    [javac] symbol: class FormPanel
+    [javac] public class RegisterForm_gwt  extends FormPanel{
+    [javac]                                        ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\RegisterForm_gwt.java:10: cannot find symbol
+    [javac] symbol  : class TextBox
+    [javac] location: class edu.hm.carconfigurator.client.RegisterForm_gwt
+    [javac]   TextBox branchIdField = new TextBox();
+    [javac]   ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\RegisterForm_gwt.java:11: cannot find symbol
+    [javac] symbol  : class TextBox
+    [javac] location: class edu.hm.carconfigurator.client.RegisterForm_gwt
+    [javac]   TextBox nameField = new TextBox();
+    [javac]   ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\RegisterForm_gwt.java:12: cannot find symbol
+    [javac] symbol  : class TextBox
+    [javac] location: class edu.hm.carconfigurator.client.RegisterForm_gwt
+    [javac]   TextBox locationField = new TextBox();
+    [javac]   ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\RegisterForm_gwt.java:14: cannot find symbol
+    [javac] symbol  : class Button
+    [javac] location: class edu.hm.carconfigurator.client.RegisterForm_gwt
+    [javac]   Button findButton = new Button("Find");
+    [javac]   ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\RegisterForm_gwt.java:15: cannot find symbol
+    [javac] symbol  : class Button
+    [javac] location: class edu.hm.carconfigurator.client.RegisterForm_gwt
+    [javac]   Button clearButton = new Button("Clear");
+    [javac]   ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\RegisterForm_gwt.java:16: cannot find symbol
+    [javac] symbol  : class Button
+    [javac] location: class edu.hm.carconfigurator.client.RegisterForm_gwt
+    [javac]   Button deleteButton = new Button("Delete");
+    [javac]   ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\RegisterForm_gwt.java:17: cannot find symbol
+    [javac] symbol  : class Button
+    [javac] location: class edu.hm.carconfigurator.client.RegisterForm_gwt
+    [javac]   Button saveButton = new Button("Save");
+    [javac]   ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\RegisterPanelExt.java:25: cannot access com.google.gwt.user.client.ui.impl.FormPanelImplHost
+    [javac] class file for com.google.gwt.user.client.ui.impl.FormPanelImplHost not found
+    [javac] public class RegisterPanelExt extends FormPanel {
+    [javac]        ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Service.java:3: package com.google.gwt.user.client.rpc does not exist
+    [javac] import com.google.gwt.user.client.rpc.RemoteService;
+    [javac]                                      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Service.java:5: cannot find symbol
+    [javac] symbol: class RemoteService
+    [javac] public interface Service extends RemoteService {
+    [javac]                                  ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\server\ServiceImpl.java:8: package javax.servlet.http does not exist
+    [javac] import javax.servlet.http.HttpSession;
+    [javac]                          ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\server\ServiceImpl.java:11: package com.google.gwt.user.server.rpc does not exist
+    [javac] import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+    [javac]                                      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\server\ServiceImpl.java:16: cannot find symbol
+    [javac] symbol: class RemoteServiceServlet
+    [javac] public class ServiceImpl  extends RemoteServiceServlet implements Service{
+    [javac]                                   ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\BasicArchitectureTest.java:26: package org.junit does not exist
+    [javac] import org.junit.Test;
+    [javac]                 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\BasicArchitectureTest.java:34: cannot access junit.framework.TestCase
+    [javac] class file for junit.framework.TestCase not found
+    [javac] public class BasicArchitectureTest extends AbstractArchitectureRulesConfigurationTest {
+    [javac]        ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:3: package org.junit does not exist
+    [javac] import static org.junit.Assert.assertEquals;
+    [javac]                        ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:3: static import only from classes and interfaces
+    [javac] import static org.junit.Assert.assertEquals;
+    [javac] ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:4: package org.junit does not exist
+    [javac] import static org.junit.Assert.assertNotNull;
+    [javac]                        ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:4: static import only from classes and interfaces
+    [javac] import static org.junit.Assert.assertNotNull;
+    [javac] ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:5: package org.junit does not exist
+    [javac] import static org.junit.Assert.assertNull;
+    [javac]                        ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:5: static import only from classes and interfaces
+    [javac] import static org.junit.Assert.assertNull;
+    [javac] ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:12: package org.junit does not exist
+    [javac] import org.junit.After;
+    [javac]                 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:13: package org.junit does not exist
+    [javac] import org.junit.Before;
+    [javac]                 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:14: package org.junit does not exist
+    [javac] import org.junit.Test;
+    [javac]                 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\GenericDAOTest.java:9: package org.junit does not exist
+    [javac] import org.junit.After;
+    [javac]                 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\GenericDAOTest.java:10: package org.junit does not exist
+    [javac] import org.junit.Before;
+    [javac]                 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\GenericDAOTest.java:11: package org.junit does not exist
+    [javac] import org.junit.Test;
+    [javac]                 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\LoginServiceTest.java:3: package org.junit does not exist
+    [javac] import org.junit.Before;
+    [javac]                 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\LoginServiceTest.java:4: package org.junit does not exist
+    [javac] import org.junit.Test;
+    [javac]                 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\PersonDAOTest.java:7: package org.junit does not exist
+    [javac] import org.junit.After;
+    [javac]                 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\PersonDAOTest.java:8: package org.junit does not exist
+    [javac] import org.junit.Before;
+    [javac]                 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\PersonDAOTest.java:9: package org.junit does not exist
+    [javac] import org.junit.Test;
+    [javac]                 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\RegistrationServiceTest.java:5: package org.junit does not exist
+    [javac] import org.junit.Before;
+    [javac]                 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\RegistrationServiceTest.java:6: package org.junit does not exist
+    [javac] import org.junit.Test;
+    [javac]                 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\BasicArchitectureTest.java:52: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.BasicArchitectureTest
+    [javac] 	@Test
+    [javac] 	 ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:27: cannot find symbol
+    [javac] symbol  : class Before
+    [javac] location: class edu.hm.carconfigurator.Testmodels.DataAccessFacadeTest
+    [javac]     @Before
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:32: cannot find symbol
+    [javac] symbol  : class After
+    [javac] location: class edu.hm.carconfigurator.Testmodels.DataAccessFacadeTest
+    [javac]     @After
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:37: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.DataAccessFacadeTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:42: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.DataAccessFacadeTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:48: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.DataAccessFacadeTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:58: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.DataAccessFacadeTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\DataAccessFacadeTest.java:63: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.DataAccessFacadeTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\GenericDAOTest.java:25: cannot find symbol
+    [javac] symbol  : class Before
+    [javac] location: class edu.hm.carconfigurator.Testmodels.GenericDAOTest
+    [javac]     @Before
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\GenericDAOTest.java:32: cannot find symbol
+    [javac] symbol  : class After
+    [javac] location: class edu.hm.carconfigurator.Testmodels.GenericDAOTest
+    [javac]     @After
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\GenericDAOTest.java:42: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.GenericDAOTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\LoginServiceTest.java:17: cannot find symbol
+    [javac] symbol  : class Before
+    [javac] location: class edu.hm.carconfigurator.Testmodels.LoginServiceTest
+    [javac]     @Before
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\LoginServiceTest.java:23: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.LoginServiceTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\LoginServiceTest.java:29: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.LoginServiceTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\PersonDAOTest.java:23: cannot find symbol
+    [javac] symbol  : class Before
+    [javac] location: class edu.hm.carconfigurator.Testmodels.PersonDAOTest
+    [javac]     @Before
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\PersonDAOTest.java:30: cannot find symbol
+    [javac] symbol  : class After
+    [javac] location: class edu.hm.carconfigurator.Testmodels.PersonDAOTest
+    [javac]     @After
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\PersonDAOTest.java:35: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.PersonDAOTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\PersonDAOTest.java:41: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.PersonDAOTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\PersonDAOTest.java:47: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.PersonDAOTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\PersonDAOTest.java:52: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.PersonDAOTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\PersonDAOTest.java:58: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.PersonDAOTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\PersonDAOTest.java:64: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.PersonDAOTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\RegistrationServiceTest.java:19: cannot find symbol
+    [javac] symbol  : class Before
+    [javac] location: class edu.hm.carconfigurator.Testmodels.RegistrationServiceTest
+    [javac]     @Before
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\RegistrationServiceTest.java:25: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.RegistrationServiceTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\RegistrationServiceTest.java:30: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.RegistrationServiceTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\test\edu\hm\carconfigurator\Testmodels\RegistrationServiceTest.java:35: cannot find symbol
+    [javac] symbol  : class Test
+    [javac] location: class edu.hm.carconfigurator.Testmodels.RegistrationServiceTest
+    [javac]     @Test
+    [javac]      ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\CarConfigurator.java:61: cannot find symbol
+    [javac] symbol  : variable RootPanel
+    [javac] location: class edu.hm.carconfigurator.client.CarConfigurator
+    [javac]     RootPanel.get().clear();
+    [javac]     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\CarConfigurator.java:62: cannot find symbol
+    [javac] symbol  : variable RootPanel
+    [javac] location: class edu.hm.carconfigurator.client.CarConfigurator
+    [javac]     RootPanel.get().add(homePage);
+    [javac]     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\CarConfigurator.java:69: cannot find symbol
+    [javac] symbol  : variable RootPanel
+    [javac] location: class edu.hm.carconfigurator.client.CarConfigurator
+    [javac]     RootPanel.get().setSize("100%", "100%");
+    [javac]     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\CarConfigurator.java:70: cannot find symbol
+    [javac] symbol  : variable RootPanel
+    [javac] location: class edu.hm.carconfigurator.client.CarConfigurator
+    [javac]     RootPanel.get().setStyleName("configurator-global");
+    [javac]     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\CarConfigurator.java:73: cannot find symbol
+    [javac] symbol  : class VerticalPanel
+    [javac] location: class edu.hm.carconfigurator.client.CarConfigurator
+    [javac]     VerticalPanel vPanel = new VerticalPanel();
+    [javac]     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\CarConfigurator.java:73: cannot find symbol
+    [javac] symbol  : class VerticalPanel
+    [javac] location: class edu.hm.carconfigurator.client.CarConfigurator
+    [javac]     VerticalPanel vPanel = new VerticalPanel();
+    [javac]                                ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\CarConfigurator.java:78: cannot find symbol
+    [javac] symbol  : class Label
+    [javac] location: class edu.hm.carconfigurator.client.CarConfigurator
+    [javac]     Label lblBienvenuto = new Label("Bienvenuto");
+    [javac]     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\CarConfigurator.java:78: cannot find symbol
+    [javac] symbol  : class Label
+    [javac] location: class edu.hm.carconfigurator.client.CarConfigurator
+    [javac]     Label lblBienvenuto = new Label("Bienvenuto");
+    [javac]                               ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\CarConfigurator.java:84: cannot find symbol
+    [javac] symbol  : variable RootPanel
+    [javac] location: class edu.hm.carconfigurator.client.CarConfigurator
+    [javac]     RootPanel.get().add(vPanel);
+    [javac]     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\HomePage.java:15: cannot find symbol
+    [javac] symbol  : method initComponent(com.extjs.gxt.ui.client.widget.VerticalPanel)
+    [javac] location: class edu.hm.carconfigurator.client.HomePage
+    [javac]     initComponent(vp);
+    [javac]     ^
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\src\edu\hm\carconfigurator\client\Login.java:55: cannot find symbol
+    [javac] symbol  : class Label
+    [javac] location: class edu.hm.carconfigurator.client.Login
+    [javac]   private Label error = new Label();
+    [javac]                             ^
