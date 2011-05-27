@@ -1,37 +1,15 @@
-package edu.hm.carconfigurator.server;
+package edu.hm.carconfigurator.dbaccess;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 
-import javax.servlet.http.HttpSession;
+public class JdbcConnect {
 
-
-import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-
-import edu.hm.carconfigurator.client.Person;
-import edu.hm.carconfigurator.client.Service;
-
-public class ServiceImpl  extends RemoteServiceServlet implements Service{
-
-  /**
-   * 
-   */
-  private static final long serialVersionUID = 1L;
-  private static final String USER_SESSION ="AppUser";
-  
-  
-  private void setUserInSession(Person user) {
-    HttpSession session = getThreadLocalRequest().getSession();
-    session.setAttribute(USER_SESSION, user);
-  }
-  @Override
-  public Person checkLogin(String username, String passwort) {
-    boolean ok = false;
-    System.out.println("HHHHHHHHHHHHHHHHHHIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIH");
-    
-    
+  public static void main(String[] args) {
+    String username="ray";
+    String passwort="ray";
     try {
       Class.forName("com.mysql.jdbc.Driver");
       System.out.println("DRIVER OK !");
@@ -51,12 +29,7 @@ public class ServiceImpl  extends RemoteServiceServlet implements Service{
         while(result.next()) {
           for(int j=1;j<=resultMeta.getColumnCount();j++) {
             System.out.println("\n"+result.getObject(j).toString());
-           
-            
         }
-          
-          if(result.getObject(1).toString().equals(username) && result.getObject(2).equals(passwort))
-            ok=true;
       }
     
         result.close();
@@ -67,17 +40,5 @@ public class ServiceImpl  extends RemoteServiceServlet implements Service{
       e.printStackTrace();
     }
     
-    System.out.println("DER OK IST "+ok);
-    if(ok) {
-      Person user = new Person();
-      user.setUserName(username);
-      setUserInSession(user);
-      return user;
-      
-    }
-    else
-      return null;
-  
   }
-
 }
