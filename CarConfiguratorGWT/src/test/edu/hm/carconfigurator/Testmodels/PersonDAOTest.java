@@ -8,7 +8,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import edu.hm.carconfigurator.client.Person;
+import edu.hm.carconfigurator.client.ressourcemanagement.Person;
 import edu.hm.carconfigurator.dbaccess.usermanagement.PersonDao;
 
 public class PersonDAOTest extends DatabaseTestClass {

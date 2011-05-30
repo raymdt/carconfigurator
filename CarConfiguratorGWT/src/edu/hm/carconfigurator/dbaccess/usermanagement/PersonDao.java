@@ -28,7 +28,7 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 
-import edu.hm.carconfigurator.client.Person;
+import edu.hm.carconfigurator.client.ressourcemanagement.Person;
 import edu.hm.carconfigurator.dbaccess.GenericDaoImpl;
 
 

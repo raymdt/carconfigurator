@@ -10,7 +10,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import edu.hm.carconfigurator.client.Person;
+import edu.hm.carconfigurator.client.ressourcemanagement.Person;
 import edu.hm.carconfigurator.dbaccess.IGenericDao;
 
 public class GenericDAOTest extends DatabaseTestClass {

@@ -23,7 +23,7 @@
  */
 package edu.hm.carconfigurator.services;
 
-import edu.hm.carconfigurator.client.Person;
+import edu.hm.carconfigurator.client.ressourcemanagement.Person;
 
 
 // TODO: Auto-generated Javadoc

@@ -10,9 +10,12 @@
     <pathelement location="${gwt.dir}/gwt-user.jar"/>
     <!-- next line is platform-specific -->
     <pathelement location="${gwt.dir}/gwt-dev.jar"/>
+    <pathelement location="D:/gwt/gwt-dev.jar"/>
     <pathelement location="${gwt.dir}/gwt-servlet.jar"/>
     <pathelement location="${junit.jar}"/>
     <pathelement location="${servlet-api.jar}"/>
+  	<pathelement location="C:\Users\raymdt\Desktop\downloads\gxt-2.2.4\gxt-2.2.4-gwt22.jar"/>
+  	
   </path>
   
   <target name="clean" depends="clean.test"
@@ -28,7 +31,7 @@
 
   <target name="compile" depends="prepare"
     description="compiles Java source files to bytecode">
-    <javac srcdir="src" destdir="build"
+    <javac srcdir="src/edu/hm/carconfigurator/client/ressourcemanagement" destdir="build"
       classpathref="classpath" debug="true">
     </javac>
   </target>
@@ -36,7 +39,7 @@
   <target name="compile.gwt" depends="compile"
     description="compiles Java source files to JavaScript">
     <!-- Consider adding -Xms256m -Xmx512m to improve performance. -->
-    <java classname="com.google.gwt.dev.GWTCompiler"
+    <java classname="com.google.gwt.dev.Compiler"
       classpathref="classpath" fork="true">
       <arg line="-out build/www"/>
       <arg line="-style OBFUSCATE"/>
@@ -62,6 +65,7 @@
 
   <target name="prepare" description="creates output directories">
     <mkdir dir="build"/>
+    <mkdir dir="build/www"/>
   </target>
 
   <target name="test" depends="clean.test,compile"

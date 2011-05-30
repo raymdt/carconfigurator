@@ -1,12 +1,46 @@
 Buildfile: D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build.xml
 
-clean:
-   [delete] Deleting directory D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build\classes
-   [delete] Deleting directory D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build
-
 prepare:
-    [mkdir] Created dir: D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build
-    [mkdir] Created dir: D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build\classes
+
+compile:
+    [javac] D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build.xml:35: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 1 source file to D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build
+
+compile.gwt:
+     [java] Unknown argument: -out
+     [java] Google Web Toolkit 2.3.0
+     [java] Compiler [-logLevel level] [-workDir dir] [-gen dir] [-style style] [-ea] [-XdisableClassMetadata] [-XdisableCastChecking] [-validateOnly] [-draftCompile] [-optimize level] [-compileReport] [-strict] [-localWorkers count] [-war dir] [-deploy dir] [-extra dir] module[s] 
+     [java] 
+     [java] where 
+     [java]   -logLevel               The level of logging detail: ERROR, WARN, INFO, TRACE, DEBUG, SPAM, or ALL
+     [java]   -workDir                The compiler's working directory for internal use (must be writeable; defaults to a system temp dir)
+     [java]   -gen                    Debugging: causes normally-transient generated types to be saved in the specified directory
+     [java]   -style                  Script output style: OBF[USCATED], PRETTY, or DETAILED (defaults to OBF)
+     [java]   -ea                     Debugging: causes the compiled output to check assert statements
+     [java]   -XdisableClassMetadata  EXPERIMENTAL: Disables some java.lang.Class methods (e.g. getName())
+     [java]   -XdisableCastChecking   EXPERIMENTAL: Disables run-time checking of cast operations
+     [java]   -validateOnly           Validate all source code, but do not compile
+     [java]   -draftCompile           Enable faster, but less-optimized, compilations
+     [java]   -optimize               Sets the optimization level used by the compiler.  0=none 9=maximum.
+     [java]   -compileReport          Create a compile report that tells the Story of Your Compile
+     [java]   -strict                 Only succeed if no input files have errors
+     [java]   -localWorkers           The number of local workers to use when compiling permutations
+     [java]   -war                    The directory into which deployable output files will be written (defaults to 'war')
+     [java]   -deploy                 The directory into which deployable but not servable output files will be written (defaults to 'WEB-INF/deploy' under the -war directory/jar, and may be the same as the -extra directory/jar)
+     [java]   -extra                  The directory into which extra files, not intended for deployment, will be written
+     [java] and 
+     [java]   module[s]               Specifies the name(s) of the module(s) to compile
+
+war:
+   [delete] Deleting: D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build\carconfigurator.war
+      [war] Building war: D:\Dropbox\ich\workspace_sweng\carconfigurator\CarConfiguratorGWT\build\carconfigurator.war
+
+undeploy:
+   [delete] Deleting: C:\tomcat\webapps\carconfigurator.war
+
+deploy:
+     [copy] Copying 1 file to C:\tomcat\webapps
+     [echo] browse http://localhost:8080/{module}/edu.hm.carconfigurator.carconfigurator/carconfigurator.html
 
 BUILD SUCCESSFUL
-Total time: 0 seconds
+Total time: 4 seconds

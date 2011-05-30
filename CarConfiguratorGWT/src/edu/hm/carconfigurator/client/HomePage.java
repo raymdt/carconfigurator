@@ -4,6 +4,8 @@ import com.extjs.gxt.ui.client.widget.Composite;
 import com.extjs.gxt.ui.client.widget.Label;
 import com.extjs.gxt.ui.client.widget.VerticalPanel;
 
+import edu.hm.carconfigurator.client.ressourcemanagement.Person;
+
 public class HomePage  extends Composite{
 
   public HomePage(Person person) {

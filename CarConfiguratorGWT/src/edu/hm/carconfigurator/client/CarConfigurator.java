@@ -31,6 +31,8 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
+import edu.hm.carconfigurator.client.ressourcemanagement.Person;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class CarConfigurator.
