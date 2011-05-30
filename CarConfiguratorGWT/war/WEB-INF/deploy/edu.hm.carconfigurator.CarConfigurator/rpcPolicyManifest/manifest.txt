@@ -1,2 +1,3 @@
 # Module edu.hm.carconfigurator.CarConfigurator
 # RPC service class, partial path of RPC policy file
+edu.hm.carconfigurator.client.Service, 1B2723021E77B3E2D6EF0CB969163692.gwt.rpc
