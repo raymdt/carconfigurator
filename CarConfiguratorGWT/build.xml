@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<project name="Carconfigurator" default="war" basedir=".">
+<project name="Carconfigurator" default="deploy" basedir=".">
   <!-- Arguments to gwtc and devmode targets -->
   <property name="gwt.args" value="" />
 
   <!-- Configure path to GWT SDK -->
   <property name="gwt.sdk" location="D:\entwicklung\eclipses\eclipse _GWT\plugins\com.google.gwt.eclipse.sdkbundle_2.3.0.r36v201104261928\gwt-2.3.0" />
   <property name="libe" location="libs" />
+  <property name="tomcat.dir" location="C:\tomcat" />
+
 
   <path id="project.class.path">
     <pathelement location="build/WEB-INF/classes"/>
@@ -171,12 +173,29 @@
   <target name="build" depends="gwtc" description="Build this project" />
 
   <target name="war" depends="build" description="Create a war file">
-    <zip destfile="final.war" basedir="dist"/>
+    <zip destfile="carconfigurator.war" basedir="dist"/>
   </target>
+	
+	
+	  <target name="undeploy" description="undeploys the web app. from Tomcat">
+	    <delete dir="${tomcat.dir}/webapps/carconfigurator"/>
+	    <delete file="${tomcat.dir}/webapps/carconfigurator.war"/>
+	  </target>
+	
+	  <target name="deploy" depends="war,undeploy"
+	    description="deploys the war file to Tomcat">
+	    <echo>DEPLOY</echo>
+
+	    <copy file="carconfigurator.war" todir="${tomcat.dir}\webapps"/>
+	    <echo>browse ${url}</echo>
+	  </target>
+	
+
 
   <target name="clean" description="Cleans this project">
     <delete dir="build" failonerror="false" />
     <delete dir="dist" failonerror="false" />
+    <delete dir="carconfigurator" failonerror="false" />
 
     <delete dir="build/WEB-INF/classes" failonerror="false" />
     <delete dir="build/carconfigurator" failonerror="false" />

@@ -144,7 +144,12 @@ public class Login extends Composite {
     System.out.println("Service asynnys");
     ServiceAsync svc = (ServiceAsync) GWT.create(Service.class);
     ServiceDefTarget endpoint = (ServiceDefTarget) svc;
+    if(GWT.isScript()==false) {
     endpoint.setServiceEntryPoint(GWT.getModuleBaseURL() + "Service");
+    }
+    else {
+      endpoint.setServiceEntryPoint("Service");
+    }
     return svc;
   }
 
