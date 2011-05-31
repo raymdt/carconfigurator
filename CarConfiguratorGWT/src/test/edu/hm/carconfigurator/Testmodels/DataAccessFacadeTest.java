@@ -57,7 +57,7 @@ public class DataAccessFacadeTest  {
 
     @Test
     public void testCreateUser() throws Exception {
-        assertNotNull("user Homer should have been createdâ");
+        assertNotNull("user Homer should have been created");
     }
     
     @Test
