@@ -65,6 +65,14 @@ setLoginPage();
     
   }
   
+  public void setRegister() {
+    
+   RegisterPanelExt register = new RegisterPanelExt();
+    RootPanel.get().clear();
+    RootPanel.get().add(register);
+    
+  }
+  
   
   private void setLoginPage() {
     
@@ -74,15 +82,11 @@ setLoginPage();
 
     VerticalPanel vPanel = new VerticalPanel();
 
-    Login login = new Login();
+    Log login = new Log();
     vPanel.add(login);
 
     Label lblBienvenuto = new Label("Bienvenuto");
     vPanel.add(lblBienvenuto);
-
-    RegisterPanelExt register = new RegisterPanelExt();
-    vPanel.add(register);
-
     RootPanel.get().add(vPanel);
     
   }
