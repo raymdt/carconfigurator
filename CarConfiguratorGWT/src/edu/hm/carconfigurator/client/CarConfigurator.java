@@ -67,7 +67,7 @@ setLoginPage();
   
   public void setRegister() {
     
-   RegisterPanelExt register = new RegisterPanelExt();
+   Reg register = new Reg();
     RootPanel.get().clear();
     RootPanel.get().add(register);
     
