@@ -1,2 +1,0 @@
-serviceClass: edu.hm.carconfigurator.client.Service
-path: 1B2723021E77B3E2D6EF0CB969163692.gwt.rpc
