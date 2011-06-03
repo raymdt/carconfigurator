@@ -3,8 +3,10 @@
 	<inherits name="com.google.gwt.user.theme.standard.Standard"/>
 	<inherits name="com.extjs.gxt.ui.GXT"/>
 	<inherits name="com.google.gwt.junit.JUnit"/>
-<!-- 	<inherits name="edu.hm.carconfigurator.usermanagement.Person"/>
- -->	<entry-point class="edu.hm.carconfigurator.client.CarConfigurator"/>
+	<!--  <inherits name='com.extjs.gxt.desktop.WebDesktop' /> -->
+<!-- 	<inherits name="edu.hm.carconfigurator.usermanagement.Person"/>-->
+	<entry-point class="edu.hm.carconfigurator.client.CarConfigurator"/> 
+	
 	 <servlet path='/Service' class='edu.hm.carconfigurator.server.ServiceImpl'/>
 	
 </module>

@@ -27,6 +27,7 @@
 package edu.hm.carconfigurator.client;
 
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.ui.Frame;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
@@ -37,6 +38,8 @@ import edu.hm.carconfigurator.client.ressourcemanagement.Person;
 /**
  * The Class CarConfigurator.
  */
+
+
 public class CarConfigurator implements EntryPoint {
 
   /*
@@ -54,7 +57,9 @@ public class CarConfigurator implements EntryPoint {
   
   public void onModuleLoad() {
 singleton=this;
+
 setLoginPage();
+//setFrame("http://graphics.cs.uni-sb.de/fileadmin/cguds/projects/xml3d/iX/chess.xhtml");
   }
   
   public void setHomePage(Person person) {
@@ -89,5 +94,15 @@ setLoginPage();
     vPanel.add(lblBienvenuto);
     RootPanel.get().add(vPanel);
     
+ // RootPanel.get().add(new ConfiguratorDesktop());
+    
+  }
+  public void setFrame(String address) {
+    
+  
+  Frame frame = new Frame(address);
+  frame.setWidth("100%");
+  frame.setHeight("100%");
+  RootPanel.get().add(frame);
   }
 }

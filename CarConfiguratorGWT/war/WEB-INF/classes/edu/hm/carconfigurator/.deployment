@@ -1,5 +1,0 @@
-#Wed Jun 01 19:09:15 CEST 2011
-war.name=CarConfigurator.war
-compiler.style=OBFUSCATED
-server.path=C\:\\tomcat\\webapps
-compiler.memory.max=256m
